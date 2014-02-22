@@ -16,7 +16,7 @@ This provides a [lftp](http://lftp.yar.ru/) deployer for [nanoc](http://nanoc.ws
 deploy:
   public:
     kind: lftp
-    dst_host: ftp://stoneship.org
+    dst_host: ftp://nanoc.ws
     dst_path: /var/www/nanoc.ws
 ```
 
