@@ -1,0 +1,13 @@
+language: ruby
+rvm:
+  - 2.1.0
+  - 2.0.0
+  - 1.9.3
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#nanoc"
+    template:
+      - "%{repository}/%{branch} %{commit} %{author}: %{message}"
+    use_notice: true
+    skip_join: true
