@@ -6,6 +6,8 @@
 
 This provides a [lftp](http://lftp.yar.ru/) deployer for [nanoc](http://nanoc.ws).
 
+Works with nanoc 3.x.
+
 ## Installation
 
 `gem install nanoc-lftp`
