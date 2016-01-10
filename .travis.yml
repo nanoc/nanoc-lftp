@@ -1,8 +1,24 @@
 language: ruby
 rvm:
-  - 2.1.0
-  - 2.0.0
-  - 1.9.3
+  - 2.1.2
+  - 2.2.2
+  - 2.3.0
+  - ruby-head
+branches:
+  only:
+    - "master"
+    - "/^release-/"
+before_install: gem install bundler
+matrix:
+  include:
+    - rvm: jruby-head
+      jdk: openjdk7
+      env: DISABLE_NOKOGIRI=1
+  allow_failures:
+    - rvm: jruby-head
+      jdk: openjdk7
+      env: DISABLE_NOKOGIRI=1
+    - rvm: ruby-head
 notifications:
   irc:
     channels:
@@ -11,3 +27,7 @@ notifications:
       - "%{repository}/%{branch} %{commit} %{author}: %{message}"
     use_notice: true
     skip_join: true
+cache: bundler
+sudo: false
+git:
+  depth: 10
