@@ -14,6 +14,8 @@ Works with nanoc 3.x.
 
 ## Usage
 
+Add the following to _nanoc.yaml_ (or _config.yaml_ on older sites):
+
 ```yaml
 deploy:
   public:
@@ -22,5 +24,12 @@ deploy:
     dst_path: /var/www/nanoc.ws
 ```
 
-This deployer also reads the `options` attribute, which is an array passed to
-the `lftp` command.
+Add the following somewhere in _lib/_ (e.g. _lib/plugins.rb_):
+
+```ruby
+require 'nanoc-lftp'
+```
+
+You can now deploy with LFTP.
+
+This deployer also reads the `options` attribute in the deployer configuration, which is an array passed to the `lftp` command.
